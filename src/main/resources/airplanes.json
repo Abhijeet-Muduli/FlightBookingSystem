@@ -1,0 +1,5 @@
+[
+  { "id": "A001", "type": "Boeing 737", "totalCapacity": 189, "fuelCapacity": 26020.0 },
+  { "id": "A002", "type": "Airbus A320", "totalCapacity": 180, "fuelCapacity": 24210.0 },
+  { "id": "A003", "type": "Boeing 777", "totalCapacity": 396, "fuelCapacity": 181283.0 }
+]

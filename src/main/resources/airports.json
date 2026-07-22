@@ -1,0 +1,5 @@
+[
+  { "id": "AP01", "name": "John F. Kennedy International Airport", "city": "New York" },
+  { "id": "AP02", "name": "Heathrow Airport", "city": "London" },
+  { "id": "AP03", "name": "Indira Gandhi International Airport", "city": "Delhi" }
+]

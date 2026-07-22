@@ -1,0 +1,6 @@
+[
+  { "id": "F001", "airplaneId": "A001", "originAirportId": "AP01", "destAirportId": "AP02", "departure": "2026-08-01T09:00:00", "arrival": "2026-08-01T21:00:00" },
+  { "id": "F002", "airplaneId": "A002", "originAirportId": "AP02", "destAirportId": "AP03", "departure": "2026-08-02T10:00:00", "arrival": "2026-08-02T22:30:00" },
+  { "id": "F003", "airplaneId": "A003", "originAirportId": "AP01", "destAirportId": "AP03", "departure": "2026-08-03T15:00:00", "arrival": "2026-08-04T07:45:00" },
+  { "id": "F004", "airplaneId": "A001", "originAirportId": "AP03", "destAirportId": "AP01", "departure": "2026-08-05T02:00:00", "arrival": "2026-08-05T10:30:00" }
+]
