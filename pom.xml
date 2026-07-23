@@ -13,7 +13,7 @@
     <description>File-based (JSON) flight booking system built for SDET/Java practice</description>
 
     <properties>
-        <maven.compiler.release>17</maven.compiler.release>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <jackson.version>2.17.0</jackson.version>
         <slf4j.version>2.0.13</slf4j.version>
@@ -73,7 +73,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.13.0</version>
+                <version>3.15.0</version>
             </plugin>
 
             <plugin>
@@ -82,7 +82,7 @@
                 <version>3.2.5</version>
             </plugin>
 
-            <!-- Run with: mvn compile exec:java -->
+            
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -92,7 +92,7 @@
                 </configuration>
             </plugin>
 
-            <!-- Builds a single runnable JAR (deps bundled in) via: mvn package -->
+           
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
