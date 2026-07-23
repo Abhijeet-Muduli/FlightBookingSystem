@@ -19,7 +19,7 @@ class JsonAirportRepositoryTest {
     @BeforeEach
     void setUp() {
         JsonFileHandler fileHandler = new JsonFileHandler(ObjectMapperProvider.getMapper());
-        // airports.json ships in src/main/resources, which is on the test classpath too
+        
         repository = new JsonAirportRepository(fileHandler, "airports.json");
     }
 
