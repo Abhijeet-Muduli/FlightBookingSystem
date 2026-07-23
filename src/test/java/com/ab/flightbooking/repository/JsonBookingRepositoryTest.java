@@ -26,7 +26,7 @@ class JsonBookingRepositoryTest {
     void setUp() {
         bookingsFile = tempDir.resolve("bookings.json");
         JsonFileHandler fileHandler = new JsonFileHandler(ObjectMapperProvider.getMapper());
-        // File doesn't exist yet - repository should start with an empty cache.
+       
         repository = new JsonBookingRepository(fileHandler, bookingsFile);
     }
 
