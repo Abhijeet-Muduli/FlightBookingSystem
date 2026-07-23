@@ -46,6 +46,12 @@ Build a runnable JAR             	mvn package → target/flight-booking.jar
 Run the JAR	                      java -jar target/flight-booking.jar
 Clean build + test + package	    mvn clean compile test package
 
+##Building & Running the JAR:
+mvn clean package                    - produces target/flight-booking.jar
+mvn clean package -DskipTests        - same, but skips the test run
+java -jar target/flight-booking.jar  - run it — must be from the project root
+The maven-shade-plugin already in the pom.xml bundles Jackson and SLF4J into that single JAR, so nothing extra is needed on the classpath.
+
 How to Use It:
 On launch, the app loads all seed data into memory and shows a menu that loops until you exit.
 ===== Flight Booking System =====
@@ -88,3 +94,26 @@ JsonFlightRepositoryTest — file I/O against a @TempDir, including save() persi
 JsonBookingRepositoryTest — empty-file handling, save + persist
 FlightInfoServiceTest — Mockito-mocked repositories, happy path + not-found case
 BookingServiceTest — Mockito-mocked repositories, happy path + not-found + city-mismatch cases
+
+Steps to push it on Github:
+
+First Time Setup:
+git init
+git add .
+git commit -m "Initial commit: flight booking system"
+git remote add origin https://github.com/<your-username>/flight-booking.git
+git branch -M main
+git push -u origin main
+
+For every change after that:
+git add .
+git commit -m "Describe what changed"
+git push
+
+Development Note
+The application stores booking records in data/bookings.json. During development and testing, this file will be populated with generated booking data.
+Before pushing changes to the repository, reset the file so the repository starts with a clean state:
+echo "[]" > data/bookings.json
+git add data/bookings.json
+git commit -m "Reset bookings.json
+This ensures that anyone cloning the repository starts with an empty booking database and can generate their own data locally.
