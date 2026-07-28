@@ -2,7 +2,7 @@
 
 A file-based (JSON) flight booking system built in Java with Maven — a layered, service-oriented CLI application for practicing real-world Java design patterns: models, repositories, services, DTOs, and custom exceptions.
 
-##Tech Stack:
+## Tech Stack:
 Concern	Library
 Language	Java 17 (uses records)
 Build tool	Maven
@@ -10,11 +10,11 @@ JSON serialization	Jackson (jackson-databind + jackson-datatype-jsr310 for Local
 Logging	SLF4J (slf4j-api + slf4j-simple)
 Testing	JUnit 5
 
-##Prerequisites:
+## Prerequisites:
 java -version   # 25 
 mvn -version    # any recent Maven 3.x
 
-##Folder Structure:
+## Folder Structure:
 flight-booking/
 ├── pom.xml
 ├── data/                          # live data — read AND written at runtime
@@ -37,7 +37,7 @@ flight-booking/
 │       ├── repository/                     # file I/O tests
 │       └── service/                        # Mockito-based unit tests
 
-##Commands (through terminal):
+## Commands (through terminal):
 Task:	                            Command:
 Compile	                          mvn compile
 Run the CLI	                      mvn compile exec:java
@@ -46,13 +46,13 @@ Build a runnable JAR             	mvn package → target/flight-booking.jar
 Run the JAR	                      java -jar target/flight-booking.jar
 Clean build + test + package	    mvn clean compile test package
 
-##Building & Running the JAR:
+## Building & Running the JAR:
 mvn clean package                    - produces target/flight-booking.jar
 mvn clean package -DskipTests        - same, but skips the test run
 java -jar target/flight-booking.jar  - run it — must be from the project root
 The maven-shade-plugin already in the pom.xml bundles Jackson and SLF4J into that single JAR, so nothing extra is needed on the classpath.
 
-How to Use It:
+### How to Use It:
 On launch, the app loads all seed data into memory and shows a menu that loops until you exit.
 ===== Flight Booking System =====
 1. Search flights by airport name
@@ -83,11 +83,11 @@ Option 3 — Exit
 
 Prints Goodbye! and terminates. No confirmation prompt.
 
-##Running the Tests:
+## Running the Tests:
 
 command: mvn test
 
-Covers:
+## Covers:
 
 JsonAirportRepositoryTest — reads real seeded classpath data
 JsonFlightRepositoryTest — file I/O against a @TempDir, including save() persistence
@@ -95,7 +95,7 @@ JsonBookingRepositoryTest — empty-file handling, save + persist
 FlightInfoServiceTest — Mockito-mocked repositories, happy path + not-found case
 BookingServiceTest — Mockito-mocked repositories, happy path + not-found + city-mismatch cases
 
-Steps to push it on Github:
+## Steps to push it on Github:
 
 First Time Setup:
 git init
@@ -110,7 +110,7 @@ git add .
 git commit -m "Describe what changed"
 git push
 
-Development Note
+### Development Note:
 The application stores booking records in data/bookings.json. During development and testing, this file will be populated with generated booking data.
 Before pushing changes to the repository, reset the file so the repository starts with a clean state:
 echo "[]" > data/bookings.json
